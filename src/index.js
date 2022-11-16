@@ -1,8 +1,11 @@
 import React from "react"
-import  ReactDOM  from "react-dom"
-import App from '.App.jsx'
+/** 
+ * react18.0以后API发生变化
+ * 请参考地址：https://reactjs.org/link/switch-to-createroot
+*/
+import {createRoot } from 'react-dom/client' 
+import App from './App.jsx'
 
-ReactDOM.render(
-  <App/>,
-  document.getElementById('root')
-)
+// 入口文件中渲染虚拟DOM到浏览器
+const root = createRoot(document.getElementById('root'))
+root.render(<App/>)
