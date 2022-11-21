@@ -11,6 +11,7 @@ export default class Add extends Component {
     const todoObj = {id: uuidv4(), name: event.target.value, done: false}
     // 将todoObj传递给App
     this.props.addTodo(todoObj)
+    event.target.value = ''
 
   }
   render() {

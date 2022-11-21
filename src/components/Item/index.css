@@ -6,6 +6,9 @@ li {
   padding: 0 5px;
   border-bottom: 1px solid #ddd;
 }
+li.active{
+  background: #ddd;
+}
 
 li label {
   float: left;
