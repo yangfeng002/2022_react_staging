@@ -13,6 +13,18 @@ export default class App extends Component {
       {id: '003', name: '打羽毛球', done: true},
     ]
   }
+  updateTodo = (id, doneState) => {
+    // 更新状态
+     const {todos} = this.state
+     if(todos.length > 0) {
+      const newTodoObj = todos.map(item => {
+        if(item.id === id)  item.done = doneState
+        return item
+      })
+      // 更新状态值
+      this.setState({todos: newTodoObj})
+     }
+  }
   addTodo = (todoObj) => {
     // 获取原素据
     const {todos} = this.state
@@ -28,12 +40,13 @@ export default class App extends Component {
     this.setState({todos: newTodos})
   }
   render() {
+    const {todos} = this.state
     return (
       <div className="todo-container">
       <div className="todo-wrap">
         <Add addTodo={this.addTodo}/>
-        <List todos={this.state.todos} deleteTodo={this.deleteTodo}/>
-        <Footer/>
+        <List todos={todos} deleteTodo={this.deleteTodo} updateTodo={this.updateTodo}/>
+        <Footer todos={todos}/>
       </div>
     </div>
     )

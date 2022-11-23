@@ -4,8 +4,12 @@ import './index.css'
 export default class Item extends Component {
   
   state =  {mouseIsEnter: false }
-  checkTodo = () => {
-      
+  checkTodo = (id) => {
+    // 函数柯里化
+      return (e) => {
+        // 像App组件传值
+        this.props.updateTodo(id, e.target.checked)
+      }
   }
   delTodo = (id) => {
     return () => {
@@ -30,7 +34,7 @@ export default class Item extends Component {
           className={mouseIsEnter ? 'active' : ''}
       >
         <label>
-          <input type="checkbox" defaultChecked={done} onChange={this.checkTodo}/>
+          <input type="checkbox" defaultChecked={done} onChange={this.checkTodo(id)}/>
           <span>{name}</span>
         </label>
         <button className="btn btn-danger" style={{display: mouseIsEnter ? 'block' : 'none'}} onClick={this.delTodo(id)}>删除</button>
