@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 
-export default class Aboput extends Component {
+export default class index extends Component {
   render() {
     return (
       <div>
-        
+        Home内容
       </div>
     )
   }
