@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-import { Route} from 'react-router-dom'
 import Home from './pages/Home' // Home是路由组件
 import About from './pages/About' // About是路由组件
 import Header from './components/Header' // 一般组件
-import MyNavLink from './components/MyNavLink'
+
+import {NavLink, Route} from 'react-router-dom'
 export default class App extends Component {
   render() {
     return (
@@ -25,12 +25,8 @@ export default class App extends Component {
               {/* <Link className="list-group-item" to="/about">About</Link>
               <Link className="list-group-item" to="/home">Home</Link> */}
               {/* NavLink用于导航，activeClassName属性值为active，可以省略不写 */}
-              {/* <NavLink activeClassName="currNav" className="list-group-item" to="/about">About</NavLink>
-              <NavLink activeClassName="currNav" className="list-group-item" to="/home">Home</NavLink> */}
-
-              {/* 封装NavLink组件，MyNavLink为一般组件 */}
-              <MyNavLink to="/about">About</MyNavLink>
-              <MyNavLink to="/home">Home</MyNavLink>
+              <NavLink activeClassName="currNav" className="list-group-item" to="/about">About</NavLink>
+              <NavLink activeClassName="currNav" className="list-group-item" to="/home">Home</NavLink>
 
             </div>
           </div>
