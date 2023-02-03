@@ -29,8 +29,8 @@ export default class App extends Component {
               <NavLink activeClassName="currNav" className="list-group-item" to="/home">Home</NavLink> */}
 
               {/* 封装NavLink组件，MyNavLink为一般组件 */}
-              <MyNavLink to="/atguigu/about">About</MyNavLink>
-              <MyNavLink to="/atguigu/home">Home</MyNavLink>
+              <MyNavLink to="/about">About</MyNavLink>
+              <MyNavLink to="/home">Home</MyNavLink>
 
             </div>
           </div>
@@ -40,8 +40,8 @@ export default class App extends Component {
                 {/* Route 注册路由 */}
                 <Switch>
                   {/* 使用Switch可以提供路由匹配的效率 */}
-                  <Route path="/atguigu/about" component={About}></Route>
-                  <Route path="/atguigu/home" component={Home}></Route>
+                  <Route path="/about" component={About}></Route>
+                  <Route path="/home" component={Home}></Route>
                 </Switch>
               </div>
             </div>
