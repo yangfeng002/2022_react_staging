@@ -40,8 +40,8 @@ export default class App extends Component {
                 {/* Route 注册路由 */}
                 <Switch>
                   {/* 使用Switch可以提供路由匹配的效率 */}
-                  <Route path="/about" component={About}></Route>
-                  <Route path="/home" component={Home}></Route>{/* exact是精确匹配，路径必须完全一致 */}
+                  <Route path="/about" exact component={About}></Route>
+                  <Route path="/home" exact component={Home}></Route>{/* exact是精确匹配，路径必须完全一致 */}
                   <Redirect to="/about"></Redirect> {/* Redirect可以实现默认选中导航标签 */}
                 </Switch>
               </div>
