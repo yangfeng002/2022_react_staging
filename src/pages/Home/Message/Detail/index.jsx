@@ -4,14 +4,14 @@ import qs from "qs"
 export default class Detail extends Component {
   render() {
     console.log(this.props)
-    /* parms方式接收参数 用的最多*/
+    /* parms方式接收参数 */
     // const {id, title} = this.props.match.params
 
     /* search方式接收参数 借助querystring库来解析参数 */
-    const {id, title} = qs.parse(this.props.location.search.slice(1))
+    // const {id, title} = qs.parse(this.props.location.search.slice(1))
 
     /* state方式接收参数 */
-    // const {id, title} = this.props.location.state
+    const {id, title} = this.props.location.state
 
     const contentArr = [
       {id: '001', content: '你好，中国'},
