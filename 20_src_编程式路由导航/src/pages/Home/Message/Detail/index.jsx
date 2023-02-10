@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-// import qs from "qs"
+import qs from "qs"
 
 export default class Detail extends Component {
   render() {
